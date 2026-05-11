@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8"><title>Deadlines | PROPOSAL EXPERT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .dashboard-wrapper { display: flex; min-height: 100vh; }
+        .sidebar { width: 260px; background: var(--dark-navy); color: white; position: fixed; height: 100vh; padding: 1.5rem; }
+        .main-content { flex: 1; margin-left: 260px; padding: 2rem; }
+        .nav-sidebar { list-style: none; padding: 0; }
+        .nav-sidebar a { color: rgba(255,255,255,0.7); text-decoration: none; display: flex; align-items: center; padding: 0.8rem; border-radius: 8px; }
+        .nav-sidebar a.active { background: rgba(255,255,255,0.1); color: var(--teal-cyan); }
+    </style>
+</head>
+<body class="bg-light-gray">
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="mb-5"><img src="assets/images/logo.svg" height="35" style="filter: invert(1);"></div>
+            <ul class="nav-sidebar">
+                <li><a href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i> DASHBOARD</a></li>
+                <li><a href="proposals.html"><i class="bi bi-file-earmark-text me-2"></i> PROPOSALS</a></li>
+                <li><a href="files.html"><i class="bi bi-folder2-open me-2"></i> FILES</a></li>
+                <li><a href="deadlines.html" class="active"><i class="bi bi-calendar-event me-2"></i> DEADLINES</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h3 class="mb-4">SUBMISSION DEADLINES</h3>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card card-premium d-flex flex-row align-items-center justify-content-between">
+                        <div>
+                            <h5 class="mb-1">Defense RFP Submission</h5>
+                            <p class="text-muted mb-0 small">Project ID: #2026-DLX</p>
+                        </div>
+                        <div class="text-end">
+                            <div class="h4 mb-0 text-danger">12 Days</div>
+                            <small class="text-muted">May 25, 2026</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-premium d-flex flex-row align-items-center justify-content-between">
+                        <div>
+                            <h5 class="mb-1">Smart City Tender</h5>
+                            <p class="text-muted mb-0 small">City of Chicago</p>
+                        </div>
+                        <div class="text-end">
+                            <div class="h4 mb-0 text-warning">20 Days</div>
+                            <small class="text-muted">June 02, 2026</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
