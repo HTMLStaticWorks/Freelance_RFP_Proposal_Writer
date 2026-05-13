@@ -29,14 +29,14 @@
                 <img src="assets/images/logo1.png" alt="Proposal Logo">
             </a>
             
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+            <a class="navbar-toggler border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" href="javascript:void(0)">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </a>
             
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title">MENU</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    <a role="button" class="btn-close" data-bs-dismiss="offcanvas" href="javascript:void(0)"></a>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -45,16 +45,16 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
                         <li class="nav-item"><a class="nav-link active" href="case-studies.html">CASES</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pricing.html">PRICING</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
                     </ul>
                     <div class="d-flex align-items-center gap-3 ms-lg-auto">
-                        <button id="theme-toggle" class="btn btn-toggle" title="Toggle Theme">
+                        <a id="theme-toggle" class="btn btn-toggle" title="Toggle Theme" role="button" href="javascript:void(0)">
                             <i class="bi bi-moon-fill"></i>
-                        </button>
-                        <button id="rtl-toggle" class="btn btn-toggle" title="Toggle RTL">
+                        </a>
+                        <a id="rtl-toggle" class="btn btn-toggle" title="Toggle RTL" role="button" href="javascript:void(0)">
                             RTL
-                        </button>
+                        </a>
                         <a href="login.html" class="btn-login ms-2">LOGIN</a>
                         <a href="dashboard.html" class="btn btn-primary btn-get-started">DASHBOARD</a>
                     </div>
@@ -71,21 +71,136 @@
     </header>
 
     <section class="container py-5">
+        <div class="section-title text-center">
+            <h2>REAL-WORLD Success</h2>
+            <p>A showcase of high-stakes contracts we've helped our clients secure across diverse industries.</p>
+        </div>
         <div class="row g-4">
-            <div class="col-md-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="card card-premium">
                     <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded mb-3">
-                    <h3>IT Infrastructure Modernization</h3>
-                    <p class="text-muted">A $12M contract won for a regional tech firm against national competitors.</p>
-                    <a href="#" class="btn btn-primary">READ FULL STUDY</a>
+                    <h3>IT Modernization</h3>
+                    <p class="text-muted small">A $12M contract won for a regional tech firm against national competitors in the public sector.</p>
+                    <a href="#" class="btn btn-primary btn-sm mt-2">VIEW STUDY</a>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="card card-premium">
                     <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded mb-3">
-                    <h3>Healthcare Logistics RFP</h3>
-                    <p class="text-muted">Achieved a 99.5% compliance score on a complex federal healthcare tender.</p>
-                    <a href="#" class="btn btn-primary">READ FULL STUDY</a>
+                    <h3>Healthcare Logistics</h3>
+                    <p class="text-muted small">Achieved a 99.5% compliance score on a complex federal healthcare tender for supply chain management.</p>
+                    <a href="#" class="btn btn-primary btn-sm mt-2">VIEW STUDY</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-premium">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded mb-3">
+                    <h3>Defense Engineering</h3>
+                    <p class="text-muted small">Secured a $45M long-term agreement for specialized defense components and systems integration.</p>
+                    <a href="#" class="btn btn-primary btn-sm mt-2">VIEW STUDY</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-premium">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded mb-3">
+                    <h3>Smart City Infrastructure</h3>
+                    <p class="text-muted small">Winning bid for a major metropolitan fiber-optic network expansion and data management.</p>
+                    <a href="#" class="btn btn-primary btn-sm mt-2">VIEW STUDY</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-premium">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded mb-3">
+                    <h3>Aviation Support Services</h3>
+                    <p class="text-muted small">Managed a complex multi-national RFP for ground handling services across 15 international airports.</p>
+                    <a href="#" class="btn btn-primary btn-sm mt-2">VIEW STUDY</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-premium">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded mb-3">
+                    <h3>Cybersecurity Retainer</h3>
+                    <p class="text-muted small">Secured a 3-year contract for managed security services for a leading financial institution.</p>
+                    <a href="#" class="btn btn-primary btn-sm mt-2">VIEW STUDY</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback-section bg-light-gray">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>CLIENT Feedback</h2>
+                <p>Direct insights from the businesses we've helped scale through winning proposals.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <p class="text-muted small mb-4 italic">"The level of technical detail and compliance management they brought to our defense bid was unprecedented. We couldn't have won without them."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0">Robert Wilson</h6>
+                                <small class="text-muted">Director, AeroDefense Solutions</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <p class="text-muted small mb-4 italic">"Their ability to translate our complex SaaS platform into a clear value proposition for government evaluators was the key to our $10M win."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0">Linda Peterson</h6>
+                                <small class="text-muted">COO, CloudNexus</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <p class="text-muted small mb-4 italic">"Extremely professional and deadline-driven. They managed a 300-page response in just 10 days without sacrificing quality."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&q=80" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0">Mark Thompson</h6>
+                                <small class="text-muted">Bid Manager, InfraBuilt</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="success-stats-section">
+        <div class="container text-center">
+            <h2 class="mb-5">Our SUCCESS by the Numbers</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="impact-stat py-4">
+                        <h2 class="text-primary">$1.5B+</h2>
+                        <p class="small fw-bold mb-0">TOTAL CONTRACT VALUE WON</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="impact-stat py-4">
+                        <h2 class="text-primary">85%</h2>
+                        <p class="small fw-bold mb-0">AVG. TECHNICAL SCORE</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="impact-stat py-4">
+                        <h2 class="text-primary">98%</h2>
+                        <p class="small fw-bold mb-0">COMPLIANCE ADHERENCE</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="impact-stat py-4">
+                        <h2 class="text-primary">450+</h2>
+                        <p class="small fw-bold mb-0">PROPOSALS SUBMITTED</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,14 +228,13 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2">
                     <h5 class="footer-heading">RESOURCES</h5>
                     <ul class="footer-links">
-                        <li><a href="compliance.html">Compliance</a></li>
+
                         <li><a href="proposals.html">Proposals</a></li>
                         <li><a href="deadlines.html">Deadlines</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -133,7 +247,7 @@
                     <form class="newsletter-form mt-3">
                         <div class="input-group">
                             <input type="email" class="form-control" placeholder="Your Email">
-                            <button class="btn btn-teal" type="button">SUBMIT</button>
+                            <a class="btn btn-teal" role="button" href="javascript:void(0)">SUBMIT</a>
                         </div>
                     </form>
                 </div>

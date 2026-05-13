@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | PROPOSAL EXPERT</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; text-align: left !important; }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dash-sidebar" id="dashSidebar">
+            <div class="sidebar-brand">
+                <a href="index.html">
+                    <img src="assets/images/logo1.png" alt="Proposal Expert Logo">
+                </a>
+            </div>
+            
+            <div class="sidebar-content">
+                <ul class="sidebar-nav">
+                    <li><a href="dashboard.html" class="sidebar-link"><i class="bi bi-grid-1x2-fill"></i> DASHBOARD</a></li>
+                    <li><a href="proposals.html" class="sidebar-link"><i class="bi bi-file-earmark-text"></i> PROPOSALS</a></li>
+                    <li><a href="files.html" class="sidebar-link"><i class="bi bi-folder2-open"></i> FILES</a></li>
+                    <li><a href="deadlines.html" class="sidebar-link"><i class="bi bi-calendar-event"></i> DEADLINES</a></li>
+                    <li><a href="messages.html" class="sidebar-link"><i class="bi bi-chat-dots"></i> MESSAGES</a></li>
+                    <li><a href="settings.html" class="sidebar-link active"><i class="bi bi-gear"></i> SETTINGS</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="help-card text-center">
+                    <p class="small text-white-50 mb-3">Need help with a complex RFP?</p>
+                    <a href="contact.html" class="btn btn-primary btn-sm w-100 rounded-pill" style="height: 40px; background: var(--dash-primary); color: var(--dash-sidebar-bg);">SUPPORT</a>
+                </div>
+                <a href="index.html" class="sidebar-link text-white-50"><i class="bi bi-box-arrow-left"></i> LOGOUT</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dash-main">
+            <!-- Top Bar -->
+            <div class="dash-topbar">
+                <div class="d-flex align-items-center gap-3">
+                    <button class="action-btn d-lg-none" id="sidebarToggle">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+                    <h4 class="mb-0 fw-bold">Platform Settings</h4>
+                </div>
+                
+                <div class="topbar-actions">
+                    <button id="theme-toggle" class="action-btn" title="Toggle Theme">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <button id="rtl-toggle" class="action-btn" title="Toggle RTL">
+                        RTL
+                    </button>
+                    <div class="user-profile">
+                        <div class="text-end d-none d-sm-block">
+                            <div class="fw-bold small text-uppercase">John Doe</div>
+                            <div class="text-muted" style="font-size: 0.75rem;">Enterprise Admin</div>
+                        </div>
+                        <div class="user-avatar">JD</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Content -->
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="dash-card mb-4">
+                        <h5 class="fw-bold mb-4">Account Information</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">FULL NAME</label>
+                                <input type="text" class="form-control rounded-3" value="John Doe">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">EMAIL ADDRESS</label>
+                                <input type="email" class="form-control rounded-3" value="john.doe@proposalexpert.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">POSITION</label>
+                                <input type="text" class="form-control rounded-3" value="Enterprise Admin">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">COMPANY</label>
+                                <input type="text" class="form-control rounded-3" value="Proposal Expert Ltd">
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-primary px-4 rounded-pill">SAVE CHANGES</button>
+                        </div>
+                    </div>
+
+                    <div class="dash-card">
+                        <h5 class="fw-bold mb-4">Notifications Settings</h5>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center bg-transparent">
+                                <div>
+                                    <div class="fw-bold">Email Notifications</div>
+                                    <div class="small text-muted">Receive weekly proposal summaries and deadline alerts.</div>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center bg-transparent">
+                                <div>
+                                    <div class="fw-bold">Push Notifications</div>
+                                    <div class="small text-muted">Real-time alerts for new messages and file updates.</div>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center bg-transparent border-0">
+                                <div>
+                                    <div class="fw-bold">Marketing Emails</div>
+                                    <div class="small text-muted">Receive updates about new platform features and RFP trends.</div>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="dash-card mb-4 text-center">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=00f5d4&color=0a192f" class="rounded-circle mb-3" width="100">
+                        <h5 class="fw-bold mb-1">John Doe</h5>
+                        <p class="small text-muted">Enterprise Admin</p>
+                        <button class="btn btn-outline-primary btn-sm rounded-pill w-100">CHANGE AVATAR</button>
+                    </div>
+                    
+                    <div class="dash-card bg-danger bg-opacity-10 border-danger border-opacity-20">
+                        <h5 class="fw-bold text-danger mb-3">Danger Zone</h5>
+                        <p class="small text-muted mb-4">Once you delete your account, there is no going back. Please be certain.</p>
+                        <button class="btn btn-danger w-100 rounded-pill">DELETE ACCOUNT</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.getElementById('dashSidebar').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

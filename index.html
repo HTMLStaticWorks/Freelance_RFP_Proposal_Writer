@@ -30,14 +30,14 @@
                 <img src="assets/images/logo1.png" alt="Proposal Logo">
             </a>
             
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+            <a class="navbar-toggler border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" href="javascript:void(0)">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </a>
             
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title">MENU</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    <a role="button" class="btn-close" data-bs-dismiss="offcanvas" href="javascript:void(0)"></a>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -46,16 +46,16 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
                         <li class="nav-item"><a class="nav-link" href="case-studies.html">CASES</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pricing.html">PRICING</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
                     </ul>
                     <div class="d-flex align-items-center gap-3 ms-lg-auto">
-                        <button id="theme-toggle" class="btn btn-toggle" title="Toggle Theme">
+                        <a id="theme-toggle" class="btn btn-toggle" title="Toggle Theme" role="button" href="javascript:void(0)">
                             <i class="bi bi-moon-fill"></i>
-                        </button>
-                        <button id="rtl-toggle" class="btn btn-toggle" title="Toggle RTL">
+                        </a>
+                        <a id="rtl-toggle" class="btn btn-toggle" title="Toggle RTL" role="button" href="javascript:void(0)">
                             RTL
-                        </button>
+                        </a>
                         <a href="login.html" class="btn-login ms-2">LOGIN</a>
                         <a href="dashboard.html" class="btn btn-primary btn-get-started">DASHBOARD</a>
                     </div>
@@ -99,6 +99,19 @@
         </div>
     </header>
 
+    <!-- Trusted By Section -->
+    <div class="partner-logos bg-theme-white">
+        <div class="container">
+            <div class="logo-grid">
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Partner 1"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Partner 2"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Partner 3"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Partner 4"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg" alt="Partner 5"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Services Section -->
     <section class="services-section">
         <div class="container">
@@ -107,28 +120,115 @@
                 <p>Comprehensive proposal management solutions tailored for enterprise-level requirements.</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card-premium">
-                        <div class="text-primary mb-4 h1"><i class="bi bi-pencil-square"></i></div>
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-premium text-center">
+                        <div class="h1 text-primary mb-3"><i class="bi bi-vector-pen"></i></div>
                         <h4>RFP Writing</h4>
-                        <p class="text-muted">Persuasive, compliant, and technical writing that highlights your competitive advantages.</p>
-                        <a href="service-details.html" class="text-primary text-decoration-none fw-bold">LEARN MORE <i class="bi bi-arrow-right"></i></a>
+                        <p class="text-muted">High-impact technical and persuasive writing tailored to specific evaluation criteria.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-premium">
-                        <div class="text-primary mb-4 h1"><i class="bi bi-shield-check"></i></div>
-                        <h4>Compliance</h4>
-                        <p class="text-muted">Rigorous compliance matrix development ensuring 100% adherence to RFP instructions.</p>
-                        <a href="service-details.html" class="text-primary text-decoration-none fw-bold">LEARN MORE <i class="bi bi-arrow-right"></i></a>
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-premium text-center">
+                        <div class="h1 text-primary mb-3"><i class="bi bi-clipboard-check"></i></div>
+                        <h4>Compliance Matrix</h4>
+                        <p class="text-muted">Detailed mapping and auditing to ensure 100% adherence to mandatory requirements.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-premium">
-                        <div class="text-primary mb-4 h1"><i class="bi bi-graph-up-arrow"></i></div>
-                        <h4>Strategy</h4>
-                        <p class="text-muted">Win-theme development and strategic positioning to differentiate your bid.</p>
-                        <a href="service-details.html" class="text-primary text-decoration-none fw-bold">LEARN MORE <i class="bi bi-arrow-right"></i></a>
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-premium text-center">
+                        <div class="h1 text-primary mb-3"><i class="bi bi-lightbulb"></i></div>
+                        <h4>Win Strategy</h4>
+                        <p class="text-muted">Competitive analysis and win-theme development to differentiate your response.</p>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-premium text-center">
+                        <div class="h1 text-primary mb-3"><i class="bi bi-briefcase"></i></div>
+                        <h4>Bid Management</h4>
+                        <p class="text-muted">End-to-end orchestration of the proposal lifecycle, ensuring all deadlines and milestones are met.</p>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-premium text-center">
+                        <div class="h1 text-primary mb-3"><i class="bi bi-palette"></i></div>
+                        <h4>Graphic Design</h4>
+                        <p class="text-muted">Professional layout and information design to make your proposal visually stunning and easy to read.</p>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-premium text-center">
+                        <div class="h1 text-primary mb-3"><i class="bi bi-mic"></i></div>
+                        <h4>Presentation Coaching</h4>
+                        <p class="text-muted">Preparing your team for oral presentations and interviews with evaluators to seal the deal.</p>
+                    </div>
+                </div>
+                <!-- Service 7 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-premium text-center">
+                        <div class="h1 text-primary mb-3"><i class="bi bi-arrow-repeat"></i></div>
+                        <h4>Post-Submission Support</h4>
+                        <p class="text-muted">Handling clarifications, BAFOs, and post-award debriefs to ensure long-term success.</p>
+                    </div>
+                </div>
+                <!-- Service 8 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-premium text-center">
+                        <div class="h1 text-primary mb-3"><i class="bi bi-search"></i></div>
+                        <h4>Proposal Audit</h4>
+                        <p class="text-muted">Independent review of your draft proposals to identify gaps and improvement opportunities.</p>
+                    </div>
+                </div>
+                <!-- Service 9 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-premium text-center">
+                        <div class="h1 text-primary mb-3"><i class="bi bi-database"></i></div>
+                        <h4>Content Library</h4>
+                        <p class="text-muted">Building and managing a central repository of pre-approved technical content for faster responses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section bg-dark text-white">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2 class="text-white">Our PRICING Models</h2>
+                <p class="text-white-50">Transparent, enterprise-grade pricing tailored to your bidding volume.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="card card-premium text-center h-100">
+                        <h3 class="text-dark">Single Bid</h3>
+                        <div class="display-5 my-4 fw-bold text-primary">$2,500<small class="fs-6 text-muted">/RFP</small></div>
+                        <ul class="list-unstyled mb-4 text-dark text-start mx-auto" style="max-width: 250px;">
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Full RFP Review</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Compliance Matrix</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Technical Writing</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Final QA Audit</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline w-100 mt-auto">GET STARTED</a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card card-premium text-center border-primary border-2 shadow-lg h-100">
+                        <div class="badge bg-primary mb-2 mx-auto" style="width: fit-content;">MOST POPULAR</div>
+                        <h3 class="text-dark">Enterprise Retainer</h3>
+                        <div class="display-5 my-4 fw-bold text-primary">$7,500<small class="fs-6 text-muted">/mo</small></div>
+                        <ul class="list-unstyled mb-4 text-dark text-start mx-auto" style="max-width: 250px;">
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Up to 4 Bids/mo</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Priority Writing Team</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Strategy Workshops</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Post-Submission Support</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-100 mt-auto">SUBSCRIBE NOW</a>
                     </div>
                 </div>
             </div>
@@ -251,6 +351,57 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials-section bg-light-gray">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>SUCCESS Stories</h2>
+                <p>What our clients say about our proposal management and winning strategies.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote"></i>
+                        <p class="text-muted mb-4">"The team at Proposal Expert transformed our technical jargon into a compelling value proposition. We won a $12M contract on our first try with them."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-img">
+                            <div>
+                                <h6 class="mb-0">David Chen</h6>
+                                <small class="text-muted">CEO, TechLogistics</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote"></i>
+                        <p class="text-muted mb-4">"Their attention to detail and compliance management is second to none. We no longer worry about missing mandatory requirements in complex RFPs."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-img">
+                            <div>
+                                <h6 class="mb-0">Sarah Jenkins</h6>
+                                <small class="text-muted">Director of Bids, HealthCare Plus</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote"></i>
+                        <p class="text-muted mb-4">"Working with Proposal Expert is like having a full-scale proposal department in-house. Their writers are truly experts in the field."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-img">
+                            <div>
+                                <h6 class="mb-0">Michael Ross</h6>
+                                <small class="text-muted">VP Operations, BuildCorp</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Consultation CTA -->
     <section class="consultation-cta py-5" style="background: var(--dark-navy);">
         <div class="container text-center text-white">
@@ -329,14 +480,13 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2">
                     <h5 class="footer-heading">RESOURCES</h5>
                     <ul class="footer-links">
-                        <li><a href="compliance.html">Compliance</a></li>
+
                         <li><a href="proposals.html">Proposals</a></li>
                         <li><a href="deadlines.html">Deadlines</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -349,7 +499,7 @@
                     <form class="newsletter-form mt-3">
                         <div class="input-group">
                             <input type="email" class="form-control" placeholder="Your Email">
-                            <button class="btn btn-teal" type="button">SUBMIT</button>
+                            <a class="btn btn-teal" role="button" href="javascript:void(0)">SUBMIT</a>
                         </div>
                     </form>
                 </div>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | PROPOSAL EXPERT</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; text-align: left !important; }
+        .chat-container { height: calc(100vh - 250px); overflow-y: auto; padding: 1.5rem; }
+        .chat-bubble { max-width: 80%; padding: 1rem; border-radius: 15px; margin-bottom: 1.5rem; }
+        .bubble-in { background: var(--dash-card-bg); border-bottom-left-radius: 2px; }
+        .bubble-out { background: var(--dash-primary); color: var(--dash-sidebar-bg); margin-left: auto; border-bottom-right-radius: 2px; }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dash-sidebar" id="dashSidebar">
+            <div class="sidebar-brand">
+                <a href="index.html">
+                    <img src="assets/images/logo1.png" alt="Proposal Expert Logo">
+                </a>
+            </div>
+            
+            <div class="sidebar-content">
+                <ul class="sidebar-nav">
+                    <li><a href="dashboard.html" class="sidebar-link"><i class="bi bi-grid-1x2-fill"></i> DASHBOARD</a></li>
+                    <li><a href="proposals.html" class="sidebar-link"><i class="bi bi-file-earmark-text"></i> PROPOSALS</a></li>
+                    <li><a href="files.html" class="sidebar-link"><i class="bi bi-folder2-open"></i> FILES</a></li>
+                    <li><a href="deadlines.html" class="sidebar-link"><i class="bi bi-calendar-event"></i> DEADLINES</a></li>
+                    <li><a href="messages.html" class="sidebar-link active"><i class="bi bi-chat-dots"></i> MESSAGES</a></li>
+                    <li><a href="settings.html" class="sidebar-link"><i class="bi bi-gear"></i> SETTINGS</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="help-card text-center">
+                    <p class="small text-white-50 mb-3">Need help with a complex RFP?</p>
+                    <a href="contact.html" class="btn btn-primary btn-sm w-100 rounded-pill" style="height: 40px; background: var(--dash-primary); color: var(--dash-sidebar-bg);">SUPPORT</a>
+                </div>
+                <a href="index.html" class="sidebar-link text-white-50"><i class="bi bi-box-arrow-left"></i> LOGOUT</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dash-main">
+            <!-- Top Bar -->
+            <div class="dash-topbar">
+                <div class="d-flex align-items-center gap-3">
+                    <button class="action-btn d-lg-none" id="sidebarToggle">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+                    <h4 class="mb-0 fw-bold">Team Collaboration</h4>
+                </div>
+                
+                <div class="topbar-actions">
+                    <button id="theme-toggle" class="action-btn" title="Toggle Theme">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <button id="rtl-toggle" class="action-btn" title="Toggle RTL">
+                        RTL
+                    </button>
+                    <div class="user-profile">
+                        <div class="text-end d-none d-sm-block">
+                            <div class="fw-bold small text-uppercase">John Doe</div>
+                            <div class="text-muted" style="font-size: 0.75rem;">Enterprise Admin</div>
+                        </div>
+                        <div class="user-avatar">JD</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-0 dash-card overflow-hidden" style="height: calc(100vh - 180px);">
+                <!-- Contacts List -->
+                <div class="col-md-4 border-end">
+                    <div class="p-3 border-bottom">
+                        <input type="text" class="form-control rounded-pill border-0 bg-light px-3" placeholder="Search team members...">
+                    </div>
+                    <div class="overflow-y-auto" style="height: calc(100% - 70px);">
+                        <div class="p-3 d-flex align-items-center gap-3 bg-primary bg-opacity-10 cursor-pointer">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+W&background=00f5d4&color=0a192f" class="rounded-circle" width="45">
+                            <div class="overflow-hidden">
+                                <div class="fw-bold small text-truncate">Sarah Williams</div>
+                                <div class="small text-muted text-truncate">Updated the technical section...</div>
+                            </div>
+                            <div class="ms-auto small text-muted">2h</div>
+                        </div>
+                        <div class="p-3 d-flex align-items-center gap-3 border-bottom cursor-pointer">
+                            <img src="https://ui-avatars.com/api/?name=Mark+R&background=0056b3&color=fff" class="rounded-circle" width="45">
+                            <div class="overflow-hidden">
+                                <div class="fw-bold small text-truncate">Mark Reynolds</div>
+                                <div class="small text-muted text-truncate">Compliance matrix is ready.</div>
+                            </div>
+                            <div class="ms-auto small text-muted">5h</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Window -->
+                <div class="col-md-8 d-flex flex-column">
+                    <div class="p-3 border-bottom d-flex align-items-center gap-3">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+W&background=00f5d4&color=0a192f" class="rounded-circle" width="40">
+                        <div>
+                            <div class="fw-bold small">Sarah Williams</div>
+                            <div class="small text-success">Online</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-container flex-grow-1">
+                        <div class="chat-bubble bubble-in shadow-sm">
+                            <div class="small fw-bold mb-1">Sarah Williams</div>
+                            I've updated the technical section for the Defense RFP. Please review the compliance matrix before we finalize.
+                            <div class="text-end small text-muted mt-2" style="font-size: 0.65rem;">11:20 AM</div>
+                        </div>
+                        
+                        <div class="chat-bubble bubble-out shadow-sm">
+                            Thanks Sarah! I'll take a look at it after lunch. Did you include the ISO 9001 certifications?
+                            <div class="text-end small opacity-75 mt-2" style="font-size: 0.65rem;">11:45 AM</div>
+                        </div>
+
+                        <div class="chat-bubble bubble-in shadow-sm">
+                            <div class="small fw-bold mb-1">Sarah Williams</div>
+                            Yes, they are in the appendix section.
+                            <div class="text-end small text-muted mt-2" style="font-size: 0.65rem;">12:05 PM</div>
+                        </div>
+                    </div>
+
+                    <div class="p-3 border-top">
+                        <div class="input-group">
+                            <button class="btn btn-light rounded-start-pill px-3"><i class="bi bi-paperclip"></i></button>
+                            <input type="text" class="form-control border-0 bg-light px-3" placeholder="Type your message...">
+                            <button class="btn btn-primary rounded-end-pill px-4">SEND</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.getElementById('dashSidebar').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

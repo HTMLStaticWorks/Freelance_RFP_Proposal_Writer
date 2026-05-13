@@ -8,7 +8,17 @@
     --border-color: rgba(255, 255, 255, 0.1);
     --gray-100: #1e293b;
     --gray-200: #334155;
-    --primary-blue: #60a5fa; /* Brighter blue for better visibility on dark backgrounds */
+    --primary-blue: #60a5fa;
+    --card-bg: #112240;
+    --surface-bg: #0d192b;
+    --body-bg: #0a192f;
+    
+    /* Bootstrap Dark Mode Overrides */
+    --bs-body-color: var(--text-dark);
+    --bs-body-bg: var(--body-bg);
+    --bs-secondary-color: var(--text-muted);
+    --bs-heading-color: var(--white);
+    --bs-tertiary-bg: var(--gray-100);
 }
 
 [data-theme="dark"] body {
@@ -30,25 +40,55 @@
     color: var(--white);
 }
 
-[data-theme="dark"] .bg-light-gray {
-    background-color: #112240;
+[data-theme="dark"] .bg-light-gray,
+[data-theme="dark"] .bg-light,
+[data-theme="dark"] .bg-surface {
+    background-color: var(--surface-bg) !important;
+}
+
+[data-theme="dark"] .bg-light-primary {
+    background-color: rgba(96, 165, 250, 0.2) !important;
 }
 
 [data-theme="dark"] .form-control {
-    background-color: #112240;
-    border-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--white);
 }
 
 [data-theme="dark"] .form-control:focus {
-    background-color: #1e293b;
-    color: white;
+    background-color: var(--gray-100);
+    color: var(--white);
+}
+
+[data-theme="dark"] .form-label {
+    color: var(--white);
 }
 
 [data-theme="dark"] .navbar-brand text[fill="#0a192f"] {
     fill: var(--white) !important;
 }
 
+[data-theme="dark"] .bg-opacity-10 {
+    --bs-bg-opacity: 0.2 !important;
+}
+
 [data-theme="dark"] .footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Social Buttons Dark Mode */
+[data-theme="dark"] .btn-social {
+    background-color: var(--gray-100);
+    border-color: var(--border-color);
+    color: var(--white) !important;
+}
+
+[data-theme="dark"] .btn-social:hover {
+    background-color: var(--gray-200);
+    border-color: var(--primary-blue);
+}
+
+[data-theme="dark"] .btn-social img[alt="Apple"] {
+    filter: invert(1);
 }
