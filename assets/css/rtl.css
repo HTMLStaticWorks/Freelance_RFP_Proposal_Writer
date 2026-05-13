@@ -6,6 +6,7 @@
 
 [dir="rtl"] body {
     direction: rtl;
+    text-align: right;
 }
 
 [dir="rtl"] .ms-auto {
@@ -18,8 +19,25 @@
     margin-right: 0 !important;
 }
 
+[dir="rtl"] .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+[dir="rtl"] .text-start {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+    text-align: left !important;
+}
+
 [dir="rtl"] .navbar-nav {
     padding-right: 0;
+}
+
+[dir="rtl"] .nav-link {
+    text-align: right;
 }
 
 [dir="rtl"] .footer-heading {
@@ -29,19 +47,32 @@
 [dir="rtl"] .timeline-item {
     padding-left: 0;
     padding-right: 3rem;
+    border-left: none;
+    border-right: 2px solid var(--primary-blue);
 }
 
 [dir="rtl"] .timeline-item::before {
-    left: auto;
-    right: 0;
+    display: none;
 }
 
 [dir="rtl"] .timeline-icon {
     left: auto;
-    right: -15px;
+    right: -17px;
 }
 
 [dir="rtl"] .btn i {
     margin-right: 0;
     margin-left: 8px;
+}
+
+[dir="rtl"] .bi-arrow-right::before {
+    content: "\f12f"; /* bi-arrow-left */
+}
+
+/* Fix for Bootstrap grid offsets in RTL */
+@media (min-width: 992px) {
+    [dir="rtl"] .offset-lg-1 {
+        margin-right: 8.33333333%;
+        margin-left: 0;
+    }
 }

@@ -1,10 +1,16 @@
 /* Header Styles */
 
 .navbar {
-    padding: 1rem 0;
+    padding: 1rem 0; /* Mandatory 1rem vertical gap */
     transition: var(--transition-base);
     background: var(--white);
     box-shadow: var(--shadow-sm);
+}
+
+.navbar .container {
+    max-width: 1400px; /* Increased width */
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 
 .navbar.sticky-top {
@@ -17,11 +23,36 @@
     height: 40px;
 }
 
+.navbar-nav {
+    gap: 1rem; /* Mandatory 1rem gap */
+}
+
 .nav-link {
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.85rem;
     color: var(--dark-navy) !important;
-    padding: 0.5rem 1.2rem !important;
+    padding: 0.5rem 0.4rem !important;
     transition: var(--transition-base);
+    letter-spacing: 0.5px;
+    position: relative;
+    text-decoration: none !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 3px; /* Slightly thicker */
+    background: var(--primary-blue);
+    transition: var(--transition-base);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%; /* Full width for clearer state */
 }
 
 .nav-link:hover, .nav-link.active {
@@ -54,6 +85,38 @@
     color: white !important;
     padding: 10px 24px !important;
     border-radius: var(--radius-md);
+    border: 1px solid var(--primary-blue);
+}
+
+.btn-toggle {
+    width: auto;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--radius-md);
+    color: var(--dark-navy) !important;
+    transition: var(--transition-base);
+    background: transparent;
+    padding: 0 10px !important;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.btn-toggle:hover {
+    border-color: var(--primary-blue) !important;
+    color: var(--primary-blue) !important;
+}
+
+[data-theme="dark"] .btn-toggle {
+    border-color: rgba(255,255,255,0.2) !important;
+    color: var(--white) !important;
+}
+
+[data-theme="dark"] .btn-toggle:hover {
+    border-color: var(--primary-blue) !important;
 }
 
 /* Dark Mode Header Adjustment */

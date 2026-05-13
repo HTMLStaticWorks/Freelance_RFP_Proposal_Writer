@@ -6,10 +6,19 @@
     padding: 80px 0 30px;
 }
 
+.footer .container {
+    max-width: 1400px; /* Aligned with header */
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.footer .row {
+    margin-left: 0 !important; /* Remove negative margin for logo alignment */
+}
+
 .footer-logo img {
     height: 40px;
     margin-bottom: 1.5rem;
-    filter: brightness(0) invert(1);
 }
 
 .footer-logo text {

@@ -8,8 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.documentElement;
     
-    // Check for saved theme
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    // Check for saved theme, default to 'light' (Bright mode)
+    let savedTheme = localStorage.getItem('theme');
+    
+    // Force 'light' if no preference exists or to ensure bright mode is default
+    if (!savedTheme) {
+        savedTheme = 'light';
+        localStorage.setItem('theme', 'light');
+    }
+    
     body.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 
@@ -22,6 +29,37 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
         });
+    }
+
+    // RTL Toggle Logic
+    const rtlToggle = document.getElementById('rtl-toggle');
+    let savedRtl = localStorage.getItem('rtl') === 'true';
+    
+    if (savedRtl) {
+        body.setAttribute('dir', 'rtl');
+        updateRtlIcon(true);
+    } else {
+        body.setAttribute('dir', 'ltr');
+        updateRtlIcon(false);
+    }
+
+    if (rtlToggle) {
+        rtlToggle.addEventListener('click', () => {
+            const isRtl = body.getAttribute('dir') === 'rtl';
+            const newRtl = !isRtl;
+            
+            body.setAttribute('dir', newRtl ? 'rtl' : 'ltr');
+            localStorage.setItem('rtl', newRtl);
+            updateRtlIcon(newRtl);
+        });
+    }
+
+    function updateRtlIcon(isRtl) {
+        const icon = document.querySelector('#rtl-toggle i');
+        if (icon) {
+            // Just use a simple icon for RTL toggle, maybe a text "RTL" or an icon
+            // icon.className = isRtl ? 'bi bi-text-right' : 'bi bi-text-left';
+        }
     }
 
     function updateThemeIcon(theme) {
