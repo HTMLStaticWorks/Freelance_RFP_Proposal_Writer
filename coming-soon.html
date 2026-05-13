@@ -10,25 +10,130 @@
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/headers.css">
+    <link rel="stylesheet" href="assets/css/footers.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
-<body class="bg-dark text-white d-flex align-items-center min-vh-100">
-    <div class="container text-center">
-        <div class="mb-5">
-            <a href="index.html"><img src="assets/images/logo1.png" alt="Proposal Logo" height="50"></a>
-        </div>
-        <h1 class="display-3 mb-4">Something <span class="text-teal">Great</span> is Coming</h1>
-        <p class="lead mb-5">We are currently building our new proposal analytics platform. Stay tuned.</p>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="input-group mb-3">
-                    <input type="email" class="form-control py-3" placeholder="Enter your email for early access">
-                    <a class="btn btn-teal px-4" role="button" href="javascript:void(0)">NOTIFY ME</a>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand ps-0" href="index.html">
+                <img src="assets/images/logo1.png" alt="Proposal Logo">
+            </a>
+            
+            <a class="navbar-toggler border-0" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" href="javascript:void(0)">
+                <span class="navbar-toggler-icon"></span>
+            </a>
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">MENU</h5>
+                    <a role="button" class="btn-close" data-bs-dismiss="offcanvas" href="javascript:void(0)"></a>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">HOME 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="case-studies.html">CASES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3 ms-lg-auto">
+                        <a id="theme-toggle" class="btn btn-toggle" title="Toggle Theme" role="button" href="javascript:void(0)">
+                            <i class="bi bi-moon-fill"></i>
+                        </a>
+                        <a id="rtl-toggle" class="btn btn-toggle" title="Toggle RTL" role="button" href="javascript:void(0)">
+                            RTL
+                        </a>
+                        <a href="login.html" class="btn-login ms-2">LOGIN</a>
+                        <a href="dashboard.html" class="btn btn-primary btn-get-started">DASHBOARD</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
+
+    <section class="coming-soon-section py-5 my-5 bg-dark text-white text-center">
+        <div class="container py-5">
+            <h1 class="display-3 mb-4">Something <span class="text-teal">Great</span> is Coming</h1>
+            <p class="lead mb-5">We are currently building our new proposal analytics platform. Stay tuned.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control py-3" placeholder="Enter your email for early access">
+                        <a class="btn btn-teal px-4" role="button" href="javascript:void(0)">NOTIFY ME</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 ps-0">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo1.png" alt="Proposal Logo">
+                    </div>
+                    <p class="footer-description">Leading enterprise proposal management firm helping businesses secure high-value contracts through expert technical writing and compliance management.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-heading">PLATFORM</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-heading">RESOURCES</h5>
+                    <ul class="footer-links">
+
+                        <li><a href="proposals.html">Proposals</a></li>
+                        <li><a href="deadlines.html">Deadlines</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <h5 class="footer-heading">NEWSLETTER</h5>
+                    <p class="text-muted small">Subscribe for weekly proposal strategies and RFP alerts.</p>
+                    <form class="newsletter-form mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <a class="btn btn-teal" role="button" href="javascript:void(0)">SUBMIT</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 PROPOSAL EXPERT. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
 
