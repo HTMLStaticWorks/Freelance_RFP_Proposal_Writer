@@ -366,9 +366,25 @@ section {
     overflow: hidden;
     box-shadow: var(--shadow-sm);
 }
+.accordion-button {
+    text-align: left !important;
+    justify-content: flex-start;
+}
+
 .accordion-button:not(.collapsed) {
-    background-color: var(--primary-blue);
-    color: var(--white);
+    background-color: var(--primary-blue) !important;
+    color: var(--white) !important;
+    box-shadow: var(--shadow-md);
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+.accordion-body {
+    text-align: left !important;
+    background-color: var(--white);
+    padding: 1.5rem !important;
 }
 .accordion-button:focus {
     box-shadow: none;
@@ -660,3 +676,37 @@ section {
 .blog-preview .card-premium .p-4 a {
     margin-top: auto;
 }
+
+/* Blog Page Specific Styles */
+.newsletter-box {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.newsletter-box .form-control:focus {
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.z-index-2 {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-light-primary {
+    background-color: rgba(0, 86, 179, 0.05) !important;
+}
+
+/* Social Links for Light Backgrounds */
+.social-links-light a {
+    background: rgba(0, 86, 179, 0.1) !important;
+    color: var(--primary-blue) !important;
+    font-size: 1.2rem;
+}
+
+.social-links-light a:hover {
+    background: var(--primary-blue) !important;
+    color: var(--white) !important;
+}
+
