@@ -77,6 +77,13 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     gap: 1rem;
     margin-top: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .btn-cta-wrapper .btn {
+        width: 100%;
+    }
 }
 
 /* Buttons */
@@ -145,6 +152,32 @@ section {
     padding: 100px 0;
 }
 
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 25, 47, 0.6); /* Dark navy overlay for better contrast */
+    z-index: 1;
+}
+
+.hero-section > .container {
+    position: relative;
+    z-index: 2;
+}
+
 .section-title {
     margin-bottom: 50px;
 }
@@ -187,7 +220,7 @@ section {
 /* Timeline */
 .timeline-item {
     position: relative;
-    padding-left: 3rem;
+    padding-left: 3.5rem;
     margin-bottom: 2rem;
 }
 
@@ -203,7 +236,7 @@ section {
 
 .timeline-icon {
     position: absolute;
-    left: -15px;
+    left: -16px;
     top: 0;
     width: 32px;
     height: 32px;
@@ -249,11 +282,16 @@ section {
 }
 .logo-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
     opacity: 0.6;
+}
+.logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .logo-item img {
     max-width: 150px;
@@ -292,6 +330,7 @@ section {
 .testimonial-author {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     margin-top: 1.5rem;
 }
