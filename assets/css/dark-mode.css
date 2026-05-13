@@ -92,3 +92,19 @@
 [data-theme="dark"] .btn-social img[alt="Apple"] {
     filter: invert(1);
 }
+
+[data-theme="dark"] .pricing-mini {
+    background-color: var(--gray-100);
+}
+
+[data-theme="dark"] .pricing-mini h3 {
+    color: var(--white) !important;
+}
+
+[data-theme="dark"] .pricing-mini .text-muted {
+    color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .pricing-mini ul li {
+    color: var(--text-dark);
+}

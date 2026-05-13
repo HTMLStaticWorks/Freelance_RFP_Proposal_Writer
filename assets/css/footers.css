@@ -19,6 +19,8 @@
 .footer-logo img {
     height: 40px;
     margin-bottom: 1.5rem;
+    margin-left: 0 !important;
+    margin-right: auto !important;
 }
 
 .footer-logo text {
@@ -36,8 +38,18 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: var(--teal-cyan);
-    text-align: left; /* Footer headings stay left aligned */
+    text-align: left !important; /* Footer headings stay left aligned */
 }
+
+@media (max-width: 991px) {
+    .footer .col-lg-2, .footer .col-lg-4 {
+        margin-bottom: 2rem;
+    }
+    .footer-heading {
+        margin-bottom: 1rem;
+    }
+}
+
 
 .footer-links {
     list-style: none;
