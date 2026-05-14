@@ -180,4 +180,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Password Toggle Logic
+    const togglePasswordIcons = document.querySelectorAll('.toggle-password');
+    togglePasswordIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            const passwordInput = this.parentElement.querySelector('input');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            // Toggle icon classes
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+    });
 });

@@ -275,6 +275,12 @@ section {
     .section-title h2 {
         font-size: 2rem;
     }
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+    .testimonial-card h6 {
+        font-size: 0.95rem;
+    }
 }
 
 /* New Sections Styles */
@@ -585,6 +591,15 @@ section {
     100% { transform: translate(0, 0); }
 }
 
+@media (max-width: 767px) {
+    .floating-badge {
+        padding: 0.75rem !important;
+    }
+    .floating-badge h4 {
+        font-size: 1.25rem;
+    }
+}
+
 /* Form Enhancements */
 .card-premium a:not(.btn) {
     transition: var(--transition-base);
@@ -602,6 +617,31 @@ section {
     margin-bottom: 0.6rem;
     color: var(--dark-navy);
     letter-spacing: 0.5px;
+}
+
+/* Password Visibility Toggle */
+.password-field-group {
+    position: relative;
+}
+
+.password-field-group .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-muted);
+    z-index: 10;
+    transition: var(--transition-base);
+    font-size: 1.2rem;
+}
+
+.password-field-group .toggle-password:hover {
+    color: var(--primary-blue);
+}
+
+.password-field-group .form-control {
+    padding-right: 45px !important;
 }
 
 /* Social Buttons */

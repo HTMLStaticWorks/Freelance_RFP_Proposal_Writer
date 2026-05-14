@@ -264,6 +264,23 @@ body {
     position: relative;
 }
 
+/* Circular Status Tags */
+.status-tag {
+    width: 60px;
+    height: 60px;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 !important;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+}
+
 .h-100 {
     height: 100% !important;
 }
