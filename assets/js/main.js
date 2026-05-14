@@ -149,4 +149,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
         counters.forEach(counter => observer.observe(counter));
     }
+
+    // Back to Top Functionality
+    const path = window.location.pathname;
+    const currentPage = path.split('/').pop() || 'index.html';
+    const excludedPages = ['login.html', 'register.html'];
+
+    if (!excludedPages.includes(currentPage)) {
+        // Create button
+        const backToTopBtn = document.createElement('button');
+        backToTopBtn.className = 'back-to-top';
+        backToTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
+        backToTopBtn.setAttribute('title', 'Back to Top');
+        document.body.appendChild(backToTopBtn);
+
+        // Show/hide button on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top on click
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
