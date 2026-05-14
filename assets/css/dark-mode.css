@@ -108,3 +108,134 @@
 [data-theme="dark"] .pricing-mini ul li {
     color: var(--text-dark);
 }
+
+/* Testimonials Dark Mode */
+[data-theme="dark"] .testimonial-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .testimonial-card p {
+    color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .testimonial-card h6 {
+    color: var(--white) !important;
+}
+
+[data-theme="dark"] .testimonial-card .bi-quote {
+    color: var(--primary-blue);
+    opacity: 0.4;
+}
+
+/* Partner Logo Contrast */
+[data-theme="dark"] .logo-grid {
+    opacity: 0.9;
+}
+
+[data-theme="dark"] .logo-item img {
+    filter: brightness(0) invert(1) opacity(0.8);
+}
+
+[data-theme="dark"] .logo-item img:hover {
+    filter: brightness(0) invert(1) opacity(1);
+}
+
+/* Home v2 - Industry Cards */
+[data-theme="dark"] .industry-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .industry-card h4 {
+    color: var(--white) !important;
+}
+
+/* Home v2 - FAQ Accordion */
+[data-theme="dark"] .accordion-item {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .accordion-button {
+    background-color: var(--card-bg);
+    color: var(--white) !important;
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: rgba(96, 165, 250, 0.1);
+    color: var(--primary-blue) !important;
+}
+
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1);
+}
+
+[data-theme="dark"] .accordion-body {
+    background-color: var(--card-bg);
+    color: var(--text-muted) !important;
+}
+
+/* Global Impact & Methodology */
+[data-theme="dark"] .approach-card,
+[data-theme="dark"] .methodology-item,
+[data-theme="dark"] .impact-stat,
+[data-theme="dark"] .bg-theme-white {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .approach-number {
+    color: var(--primary-blue);
+    opacity: 0.8;
+}
+
+[data-theme="dark"] .methodology-item h5,
+[data-theme="dark"] .approach-card h5 {
+    color: var(--white) !important;
+}
+
+[data-theme="dark"] .impact-stat h3 {
+    color: var(--primary-blue) !important;
+}
+
+[data-theme="dark"] .team-card {
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .team-info h5 {
+    color: var(--white) !important;
+}
+
+/* Dashboard Table Visibility */
+[data-theme="dark"] .dash-table td.fw-bold {
+    color: var(--white) !important;
+}
+
+[data-theme="dark"] .dash-table td {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .dash-card .bg-light {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: var(--white) !important;
+}
+
+[data-theme="dark"] .dash-card .bg-light h5,
+[data-theme="dark"] .dash-card .bg-light span {
+    color: var(--white) !important;
+}
+
+/* Badge Refinement */
+.badge.rounded-pill {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.5em 1.2em;
+}
+
+[data-theme="dark"] .badge.bg-opacity-10 {
+    background-color: rgba(var(--bs-primary-rgb), 0.15) !important;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}

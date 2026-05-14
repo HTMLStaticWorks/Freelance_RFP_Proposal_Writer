@@ -1,14 +1,18 @@
 /* Header Styles */
 
 .navbar {
-    padding: 1rem 0; /* Mandatory 1rem vertical gap */
+    padding: 1rem 0;
     transition: var(--transition-base);
-    background: var(--white);
+    background-color: var(--card-bg) !important;
     box-shadow: var(--shadow-sm);
+    position: relative;
+    z-index: 1030;
+    opacity: 1 !important;
 }
 
 .navbar .container {
-    max-width: 1400px; /* Increased width */
+    max-width: 1400px;
+    /* Increased width */
     padding-left: 1rem !important;
     padding-right: 1rem !important;
 }
@@ -24,7 +28,8 @@
 }
 
 .navbar-nav {
-    gap: 1rem; /* Mandatory 1rem gap */
+    gap: 1rem;
+    /* Mandatory 1rem gap */
 }
 
 .nav-link {
@@ -44,23 +49,28 @@
     bottom: -2px;
     left: 50%;
     width: 0;
-    height: 3px; /* Slightly thicker */
+    height: 3px;
+    /* Slightly thicker */
     background: var(--primary-blue);
     transition: var(--transition-base);
     transform: translateX(-50%);
     border-radius: 2px;
 }
 
-.nav-link:hover::after, .nav-link.active::after {
-    width: 100%; /* Full width for clearer state */
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+    /* Full width for clearer state */
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--primary-blue) !important;
 }
 
 .offcanvas {
-    background-color: var(--white);
+    background-color: var(--card-bg) !important;
+    opacity: 1 !important;
 }
 
 .offcanvas-header {
@@ -128,7 +138,7 @@
 }
 
 [data-theme="dark"] .btn-toggle {
-    border-color: rgba(255,255,255,0.2) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
     color: var(--white) !important;
 }
 
@@ -138,8 +148,8 @@
 
 /* Dark Mode Header Adjustment */
 [data-theme="dark"] .navbar {
-    background: var(--dark-navy);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: var(--dark-navy) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] .nav-link {
@@ -150,12 +160,35 @@
     fill: var(--white) !important;
 }
 
+[data-theme="dark"] .offcanvas {
+    background-color: var(--dark-navy) !important;
+    opacity: 1 !important;
+    color: var(--white);
+}
+
+[data-theme="dark"] .offcanvas-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .offcanvas-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+[data-theme="dark"] .offcanvas-body .nav-link {
+    color: var(--white) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+    filter: invert(1) brightness(1.5);
+}
+
 /* Hamburger Menu Breakpoint Adjustment (1100px) */
 @media (max-width: 1100px) {
     .navbar-expand-lg .navbar-toggler {
         display: block !important;
     }
-    
+
     /* Force offcanvas back to its mobile state */
     .navbar-expand-lg .offcanvas {
         position: fixed !important;
@@ -165,7 +198,8 @@
         flex-direction: column !important;
         max-width: 100% !important;
         visibility: hidden !important;
-        background-color: var(--white) !important;
+        background-color: var(--card-bg) !important;
+        opacity: 1 !important;
         background-clip: padding-box !important;
         outline: 0 !important;
         transition: transform 0.3s ease-in-out !important;
@@ -174,6 +208,7 @@
         right: 0 !important;
         width: 300px !important;
         border-left: 1px solid var(--border-color) !important;
+        overflow-y: auto !important;
     }
 
     .navbar-expand-lg .offcanvas.show {
@@ -198,6 +233,8 @@
         flex-direction: column !important;
         align-items: flex-start !important;
         padding: 1.5rem !important;
+        overflow-y: auto !important;
+        flex: 1 1 auto !important;
     }
 
     .offcanvas-body .d-flex {
