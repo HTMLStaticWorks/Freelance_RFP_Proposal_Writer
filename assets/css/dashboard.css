@@ -4,12 +4,12 @@
 */
 
 :root {
-    --dash-sidebar-bg: #0a192f;
+    --dash-sidebar-bg: #021c58;
     --dash-card-bg: rgba(255, 255, 255, 0.95);
     --dash-glass-bg: rgba(255, 255, 255, 0.7);
     --dash-glass-border: rgba(255, 255, 255, 0.2);
-    --dash-primary: #00f5d4;
-    --dash-accent: #0056b3;
+    --dash-primary: #c08e26;
+    --dash-accent: #021c58;
     --dash-text: #1e293b;
     --dash-text-muted: #64748b;
     --dash-shadow: 0 10px 30px -5px rgba(2, 12, 27, 0.1);
@@ -33,7 +33,7 @@ body {
 }
 
 [data-theme="dark"] body {
-    background-color: #0a192f;
+    background-color: #021c58;
 }
 
 /* Dashboard Layout */
@@ -125,7 +125,7 @@ body {
 .sidebar-link.active {
     color: var(--dash-sidebar-bg);
     background: var(--dash-primary);
-    box-shadow: 0 4px 15px rgba(0, 245, 212, 0.3);
+    box-shadow: 0 4px 15px rgba(192, 142, 38, 0.3);
 }
 
 .sidebar-link.active i {
@@ -250,7 +250,7 @@ body {
     font-weight: 600;
     font-family: 'Outfit', sans-serif;
     font-size: 1.1rem;
-    box-shadow: 0 4px 12px rgba(0, 245, 212, 0.2);
+    box-shadow: 0 4px 12px rgba(192, 142, 38, 0.2);
 }
 
 /* Dashboard Cards */
@@ -367,7 +367,7 @@ body {
     background: var(--dash-primary);
     color: var(--dash-sidebar-bg);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 245, 212, 0.2);
+    box-shadow: 0 5px 15px rgba(192, 142, 38, 0.2);
 }
 
 [data-theme="dark"] .dash-table thead th {
@@ -476,7 +476,7 @@ body {
 .form-control:focus {
     background: #ffffff;
     border-color: var(--dash-primary);
-    box-shadow: 0 0 0 4px rgba(0, 245, 212, 0.1);
+    box-shadow: 0 0 0 4px rgba(192, 142, 38, 0.1);
     color: var(--dash-text);
 }
 
@@ -497,7 +497,7 @@ body {
 }
 
 .form-check-input:focus {
-    box-shadow: 0 0 0 4px rgba(0, 245, 212, 0.1);
+    box-shadow: 0 0 0 4px rgba(192, 142, 38, 0.1);
     border-color: var(--dash-primary);
 }
 
