@@ -128,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (entry.isIntersecting) {
                     const counter = entry.target;
                     const target = parseInt(counter.getAttribute('data-target'));
+                    const append = counter.getAttribute('data-append') || '';
+                    const prepend = counter.getAttribute('data-prepend') || '';
                     const duration = 2000;
                     const step = target / (duration / 16);
                     let current = 0;
@@ -135,10 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     const updateCounter = () => {
                         current += step;
                         if (current < target) {
-                            counter.innerText = Math.ceil(current);
+                            counter.innerText = prepend + Math.ceil(current) + append;
                             requestAnimationFrame(updateCounter);
                         } else {
-                            counter.innerText = target;
+                            counter.innerText = prepend + target + append;
                         }
                     };
                     updateCounter();

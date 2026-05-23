@@ -897,7 +897,7 @@ section {
 .proposal-storyboard {
     position: relative;
     width: 100%;
-    min-height: 380px;
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -906,20 +906,20 @@ section {
 
 @media (max-width: 991px) {
     .proposal-storyboard {
-        min-height: 340px;
+        min-height: 360px;
         margin-top: 1.5rem;
     }
 }
 
 .glowing-orb {
     position: absolute;
-    width: 280px;
-    height: 280px;
-    background: radial-gradient(circle, rgba(192, 142, 38, 0.2) 0%, rgba(13, 60, 180, 0) 70%);
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(192, 142, 38, 0.18) 0%, rgba(13, 60, 180, 0) 70%);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: blur(40px);
+    filter: blur(55px);
     z-index: 1;
     pointer-events: none;
 }
@@ -931,12 +931,13 @@ section {
 .story-card-document {
     position: relative;
     z-index: 3;
-    width: 78%;
+    width: 100%;
+    max-width: 480px;
     background: rgba(10, 25, 47, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg), 0 30px 60px rgba(0, 0, 0, 0.4);
-    padding: 1.2rem;
+    padding: 1.5rem;
     animation: float-main 6s ease-in-out infinite;
 }
 
@@ -945,24 +946,13 @@ section {
     box-shadow: var(--shadow-lg), 0 35px 70px rgba(192, 142, 38, 0.1);
 }
 
-.story-card-compliance {
-    position: absolute;
-    bottom: 15px;
-    left: -10px;
-    width: 65%;
-    z-index: 4;
-    background: rgba(25, 38, 62, 0.95);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: var(--radius-md);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    padding: 0.8rem 1rem;
-    animation: float-left-card 7s ease-in-out infinite;
-}
-
-.story-card-compliance:hover {
-    border-color: rgba(192, 142, 38, 0.4);
-    transform: scale(1.02);
+@media (max-width: 768px) {
+    .proposal-storyboard {
+        min-height: auto;
+    }
+    .story-card-document {
+        max-width: 100%;
+    }
 }
 
 .story-card-award {
